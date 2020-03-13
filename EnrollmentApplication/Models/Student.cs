@@ -25,7 +25,10 @@ namespace EnrollmentApplication.Models
         [MaxLength(50, ErrorMessage = "Allowable max length is 50")]
         public virtual string FirstName { get; set; }
 
+        
+        [MinimumAge(20)]
 
+        public virtual int Age { get; set; }
 
 
     }

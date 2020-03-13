@@ -18,6 +18,7 @@ namespace EnrollmentApplication.Controllers
         // GET: Enrollment
         public ActionResult Index()
         {
+            
             var enrollments = db.Enrollments.Include(e => e.Course).Include(e => e.Student);
             return View(enrollments.ToList());
         }
